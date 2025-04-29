@@ -1,0 +1,50 @@
+---
+import Card, { type CardProps } from "./Card.astro";
+
+let projects: CardProps[] = [
+  {
+    title: "KDE",
+    body: "I have contributed to the KDE Community, specifically to KDE Plasma, a Linux desktop environment. One specific task involved implementing UI adjustments to make the interface simpler to navigate for users.",
+    link: "https://invent.kde.org/engin-karakurt",
+    linkTitle: "Visit my KDE GitLab Profile",
+    skills: ["C++", "Qt", "QML"],
+  },
+  {
+    title: "microbot-launcher-unix",
+    body: "I have created an Unofficial Open Source Cross-Plattform Launcher for Microbot, a RuneLite botting client for the game Old School RuneScape. The Launcher automatically updates the client for users and manages versions by deleting old versions. It also automatically launches the client. It is meant for running and automatically updating Microbot on macOS or Linux, where the Official Microbot Client is not supported. However, it also works on Windows!",
+    link: "https://github.com/enginkarakurt/microbot-launcher-unix",
+    linkTitle: "Visit the Project Repository",
+    skills: ["Java"],
+  },
+];
+---
+
+<header>
+  <h1>Engin Karakurt</h1>
+</header>
+<main>
+  <hr />
+  <section>
+    <p>
+      Hey! My name is Engin Karakurt. I'm a Full-Stack Software Developer from
+      Germany.
+    </p>
+    <a href="https://github.com/enginkarakurt">Visit my GitHub Profile</a>
+  </section>
+  <hr />
+  <section>
+    <h2>My Work</h2>
+    {
+      projects.map((project) => (
+        <Card
+          title={project.title}
+          body={project.body}
+          link={project.link}
+          linkTitle={project.linkTitle}
+          skills={project.skills}
+        />
+      ))
+    }
+  </section>
+  <hr />
+</main>

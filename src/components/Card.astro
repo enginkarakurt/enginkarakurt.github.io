@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  link: string;
+  linkTitle: string;
+  skills: string[];
+}
+
+export interface CardProps {
+  title: string;
+  body: string;
+  link: string;
+  linkTitle: string;
+  skills: string[];
+}
+
+const { title, body, link, linkTitle, skills } = Astro.props;
+---
+
+<h3>{title}</h3>
+<p>
+  {body}
+</p>
+<a href={link}>{linkTitle}</a>
+
+<h4>Skills</h4>
+<ul>
+  {skills.map((skill) => <li>{skill}</li>)}
+</ul>
