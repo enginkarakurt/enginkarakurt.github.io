@@ -4,16 +4,16 @@ import Card, { type CardProps } from "./Card.astro";
 let projects: CardProps[] = [
   {
     title: "KDE",
-    body: "I have contributed to the KDE Community, specifically to KDE Plasma, a Linux desktop environment. One specific task involved implementing UI adjustments to make the interface simpler to navigate for users.",
+    body: "I have contributed to the KDE Community, specifically focusing on KDE Plasma, a Linux desktop environment. One notable task involved implementing user interface enhancements to improve navigability and overall user experience.",
     link: "https://invent.kde.org/engin-karakurt",
-    linkTitle: "Visit my KDE GitLab Profile",
+    linkTitle: "Visit my KDE GitLab profile",
     skills: ["C++", "Qt", "QML"],
   },
   {
     title: "microbot-launcher-unix",
-    body: "I have created an Unofficial Open Source Cross-Plattform Launcher for Microbot, a RuneLite botting client for the game Old School RuneScape. The Launcher automatically updates the client for users and manages versions by deleting old versions. It also automatically launches the client. It is meant for running and automatically updating Microbot on macOS or Linux, where the Official Microbot Client is not supported. However, it also works on Windows!",
+    body: "I have developed an unofficial, open-source, cross-platform launcher for Microbot, a RuneLite botting client designed for the game Old School RuneScape. This launcher automates client updates and manages versions by removing outdated ones. It also facilitates the automatic launch of the client. Primarily intended for running and updating Microbot on macOS and Linux, where the official Microbot client is not supported, it is also compatible with Windows.",
     link: "https://github.com/enginkarakurt/microbot-launcher-unix",
-    linkTitle: "Visit the Project Repository",
+    linkTitle: "Visit the project repository",
     skills: ["Java"],
   },
 ];
@@ -26,10 +26,11 @@ let projects: CardProps[] = [
   <hr />
   <section>
     <p>
-      Hey! My name is Engin Karakurt. I'm a Full-Stack Software Developer from
-      Germany.
+      I am Engin Karakurt, a Full-Stack Software Developer based in Germany. You
+      are welcome to <a href="https://github.com/enginkarakurt"
+        >visit my GitHub profile</a
+      > and explore my work below.
     </p>
-    <a href="https://github.com/enginkarakurt">Visit my GitHub Profile</a>
   </section>
   <hr />
   <section>
@@ -46,5 +47,4 @@ let projects: CardProps[] = [
       ))
     }
   </section>
-  <hr />
 </main>
