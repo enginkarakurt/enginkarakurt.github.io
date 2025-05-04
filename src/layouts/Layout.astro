@@ -25,13 +25,44 @@ import { Font } from "astro:assets";
 </html>
 
 <style>
+  :root {
+    --base: #cfcfcf;
+    --text: #212121;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --base: #212121;
+      --text: #cfcfcf;
+    }
+  }
+
+  html {
+    color-scheme: dark light;
+  }
+
+  :root:has(#theme [value="light"]:checked) {
+    color-scheme: light;
+    --base: #cfcfcf;
+    --text: #212121;
+  }
+
+  :root:has(#theme [value="dark"]:checked) {
+    color-scheme: dark;
+    --base: #212121;
+    --text: #cfcfcf;
+  }
+
   body {
-    font-family: var(--font-inter);
     margin: 20px auto;
-    max-width: 650px;
-    line-height: 1.6;
-    font-size: 18px;
-    color: #444;
     padding: 0 10px;
+    max-width: 650px;
+
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: var(--font-inter);
+
+    color: var(--text);
+    background-color: var(--base);
   }
 </style>
